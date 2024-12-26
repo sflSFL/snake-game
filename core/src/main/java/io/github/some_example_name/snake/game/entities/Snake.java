@@ -192,16 +192,9 @@ public class Snake {
         if (x >= 0 && x < SCREEN_WIDTH && y >= 0 && y < SCREEN_HEIGHT) {
             visited[x][y] = true;
         }
-
-        // 检查是否所有的坐标都被蛇头经过
-        for (int i = 0; i < SCREEN_WIDTH; i++) {
-            for (int j = 0; j < SCREEN_HEIGHT; j++) {
-                if (!visited[i][j]) {
-                    return false; // 如果有未经过的坐标，返回 false
-                }
-            }
-        }
-
-        return true; // 如果所有坐标都被蛇头经过，返回 true
+        if (visited[0][0] = true)
+            return true;
+        else
+            return false;
     }
 }

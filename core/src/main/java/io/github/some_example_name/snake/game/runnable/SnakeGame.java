@@ -68,7 +68,7 @@ public class SnakeGame {
             }
         } else {
             gameOver();
-            if (Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)) {
+            if (snake.hasCoveredAllCoordinates()) {
                 isEasterEgg = true; // 激活彩蛋页面
                 System.out.println("surprise");
             }
